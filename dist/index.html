@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Cinzel&family=Kolker+Brush&family=Oswald&family=Pacifico&family=Plus+Jakarta+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon Link -->
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Week-2 Day-1</title>
+  </head>
+  <body class="w-full h-full bg-black">
+    <!-- Header Part Starts Here -->
+    <header class="w-full h-auto bg-black">
+      <div class="w-full h-full grid grid-cols-3 px-2 py-2 sm:px-5 sm:py-3">
+        <div class="col-span-3 sm:col-span-2 md:col-span-1 w-full h-auto">
+          <div class="w-full h-full flex items-center justify-start gap-3">
+            <img
+              class="w-8 h-8"
+              src="https://www.netixsol.com/service/main.svg"
+              alt="NETIXSOL"
+            />
+            <div
+              class="text-start text-white sm:text-xl md:text-2xl font-Agbalumo"
+            >
+              Age Calculator
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block col-span-1 w-full h-auto">
+          <div class="w-full h-full flex items-center justify-center">
+            <nav class="text-white h-full flex flex-row items-center gap-7">
+              <a class="cursor-pointer" href="#">Home</a>
+              <a class="cursor-pointer" href="">About</a>
+              <a class="cursor-pointer" href="">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="hidden md:block col-span-1 w-full h-auto">
+          <div
+            class="w-full h-full text-end flex flex-row items-center justify-end"
+          >
+            <button
+              class="text-white px-2 py-2 bg-green-400 hover:bg-green-500"
+            >
+              Hover Me
+            </button>
+          </div>
+        </div>
+        <div class="col-span-3 sm:col-span-1 block md:hidden w-full h-auto">
+          <div class="w-full h-full flex flex-row items-center justify-end">
+            <div class="text-white text-4xl">&#8801;</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Part Ends Here -->
+    <!-- Main Part Starts Here -->
+    <main class="w-full h-auto flex flex-row items-center justify-center py-7">
+      <div
+        class="w-[80%] sm:w-[70%] md:w-[40%] h-auto bg-white rounded-br-[140px] container rounded-tl-[50px]"
+      >
+        <div class="w-full h-full grid grid-cols-5 px-4 md:px-14 py-14">
+          <div
+            class="col-span-5 w-full h-auto flex flex-row items-center justify-center md:justify-start"
+          >
+            <div
+              class="h-full flex flex-col md:flex-row items-center justify-center flex-wrap gap-10"
+            >
+              <div>
+                <div id="daycolor" class="text-gray-400 font-semibold">DAY</div>
+                <input
+                  class="w-24 py-2 px-2 rounded-lg border border-gray-400 text-black font-bold focus:border-orange-500"
+                  type="number"
+                  name="day"
+                  id="day"
+                />
+                <div id="validday" class="text-red-600 text-[12px] invisible">
+                  Not a valid date
+                </div>
+              </div>
+
+              <div>
+                <div id="monthcolor" class="text-gray-400 font-semibold">
+                  MONTH
+                </div>
+                <input
+                  class="w-24 py-2 px-2 rounded-lg border border-gray-400 text-black font-bold"
+                  type="number"
+                  name="month"
+                  id="month"
+                />
+                <div id="validmonth" class="text-red-600 text-[12px] invisible">
+                  Not a valid month
+                </div>
+              </div>
+
+              <div class="text-gray-400 font-semibold">
+                <div id="yearcolor">YEAR</div>
+                <input
+                  class="w-24 py-2 px-2 rounded-lg border border-gray-400 text-black font-bold"
+                  type="number"
+                  name="year"
+                  id="year"
+                />
+                <div
+                  id="validyear"
+                  class="text-red-600 text-[12px] font-normal invisible"
+                >
+                  Not a valid year
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block w-full auto col-span-5 md:py-3">
+            <div
+              class="w-full h-full flex flex-row items-center justify-center md:justify-start gap-2"
+            >
+              <hr class="md:w-[70%] text-slate-500 cursor-pointer" />
+              <div
+                id="arrowdown"
+                class="w-14 h-14 bg-black rounded-full flex items-center justify-center"
+              >
+                <i
+                  class="fa-solid fa-down-long fa-bounce text-white font-semibold md:text-4xl cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="block md:hidden w-full h-auto col-span-5 py-10">
+            <div
+              class="w-full h-full flex flex-row items-center justify-center md:justify-start gap-2"
+            >
+              <hr class="w-[40%] text-slate-500" />
+              <div
+                id="arrowdown1"
+                class="w-8 h-8 bg-black rounded-full flex items-center justify-center cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-down-long fa-bounce text-white font-semibold sm:text-xl cursor-pointer"
+                ></i>
+              </div>
+              <hr class="w-[40%] text-slate-500" />
+            </div>
+          </div>
+
+          <div
+            class="w-full h-auto col-span-5 flex flex-col md:flex-row items-center justify-center md:justify-start"
+          >
+            <div class="h-full flex flex-col">
+              <div
+                class="h-full flex items-center justify-start text-2xl sm:text-4xl md:text-4xl gap-4 flex-wrap font-bold mb-6 md:mb-0"
+              >
+                <div
+                  id="year2"
+                  class="text-purple-700 font-Agbalumo font-extrabold"
+                >
+                  --
+                </div>
+                <div class="font-Agbalumo font-extrabold">years</div>
+              </div>
+
+              <div
+                class="h-full flex items-center justify-start text-2xl sm:text-4xl md:text-4xl gap-4 flex-wrap font-bold mb-6 md:mb-0"
+              >
+                <div
+                  id="month2"
+                  class="text-purple-700 font-Agbalumo font-extrabold"
+                >
+                  --
+                </div>
+                <div class="font-Agbalumo font-extrabold">months</div>
+              </div>
+
+              <div
+                class="h-full flex items-center justify-start text-2xl sm:text-4xl md:text-4xl gap-4 flex-wrap font-bold mb-6 md:mb-0"
+              >
+                <div
+                  id="day2"
+                  class="text-purple-700 font-Agbalumo font-extrabold"
+                >
+                  --
+                </div>
+                <div class="font-Agbalumo font-extrabold">days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main Part Ends Here -->
+    <!-- Footer Part Starts Here -->
+    <footer class="w-full h-auto bg-black">
+      <div class="w-full h-full grid grid-cols-2 py-3">
+        <div class="col-span-2 w-full h-auto mb-2">
+          <div class="w-full h-full flex items-center justify-center">
+            <div
+              class="h-full flex flex-col md:flex-row items-center justify-center gap-2"
+            >
+              <div
+                class="w-6 h-6 bg-white flex items-center justify-center rounded-full"
+              >
+                <i class="fa-brands fa-facebook-f fa-beat text-blue-900"></i>
+              </div>
+              <div
+                class="w-6 h-6 bg-white flex items-center justify-center rounded-full"
+              >
+                <i class="fa-brands fa-instagram fa-beat text-red-900"></i>
+              </div>
+              <div
+                class="w-6 h-6 bg-white flex items-center justify-center rounded-full"
+              >
+                <i class="fa-brands fa-twitter fa-beat text-blue-900"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-2 w-full h-auto">
+          <div class="w-full h-full flex items-center justify-center flex-wrap">
+            <div class="h-full text-white text-lg">
+              &copy; 2023. All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Parts Ends Here -->
+  </body>
+  <!-- Font Awesome CDN -->
+  <script
+    src="https://kit.fontawesome.com/fa1401bf67.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>
